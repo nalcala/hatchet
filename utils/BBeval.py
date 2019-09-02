@@ -403,8 +403,8 @@ def gridprofiles(tumor, base, clones, props, args, out):
     chr_colors = {c : next(palette) for c in sorted(tumor, key=sortchr)}
     col_colors = {}
     row_colors = {}
-    am = set()
-    de = set()
+    am = {base}
+    de = {base}
 
     data = []
     for c in sorted([i for i in clones]):
