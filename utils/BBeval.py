@@ -587,6 +587,8 @@ def subclonal(tumor, base, clones, props, args, out):
         para['yticklabels'] = True
         para['row_cluster'] = True
         para['xticklabels'] = False
+        if(len(table)==1):
+            para['row_cluster'] = False
         para['col_cluster'] = False
         para['method'] = args['linkage']
         para['metric'] = similarity
