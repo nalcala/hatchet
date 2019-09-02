@@ -517,6 +517,8 @@ def gridmixtures(tumor, base, clones, props, args, out):
         para['cmap'] = "coolwarm"#"RdBu_r"
         #para['cbar_kws'] = {"ticks":[-2, -1, 0, 1, 2], "boundaries": np.linspace(-2, 2, 6)}
         para['yticklabels'] = True
+        if(len(table)==1):
+            para['row_cluster'] = False
         para['row_cluster'] = True
         para['xticklabels'] = False
         para['col_cluster'] = False
